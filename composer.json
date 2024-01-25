@@ -1,0 +1,34 @@
+{
+    "name": "lenovo/wp-plugin",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\WpPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JObV9n",
+            "email": "ricardoshrestha@gmail.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress-core-installer": "^2.0",
+        "johnpbloch/wordpress-core": "^6.4"
+        
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "repositories": {
+        "wppackagist": {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    },
+    "require-dev": {
+
+    }
+}
