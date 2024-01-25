@@ -1,0 +1,29 @@
+   //Codes from Google2FA.php
+   public function verifyKey(
+        $secret,
+        $key,
+        $window = null,
+        $timestamp = null,
+        $oldTimestamp = null
+    ) {
+        $timestamp = $this->makeTimestamp($timestamp);
+
+        return $this->findValidOTP(
+            $secret,
+            $key,
+            $window,
+            $this->makeStartingTimestamp($window, $timestamp, $oldTimestamp),
+            $timestamp,
+            $oldTimestamp
+        );
+    }
+
+    public function verifyKeyNewer( $secret,$key,$oldTimestamp,$window = null,$timestamp = null) {
+        return $this->verifyKey(
+            $secret,
+            $key,
+            $window,
+            $timestamp,
+            $oldTimestamp
+        );
+    }
