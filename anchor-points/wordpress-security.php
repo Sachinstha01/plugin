@@ -43,6 +43,7 @@ class Security
         wp_localize_script('recovery_codes_security', 'recovery_codes_security', array('ajaxurl' => admin_url('admin-ajax.php')));
     }
 
+
     public function dbSetup()
     {
         $this->dbCreation();
